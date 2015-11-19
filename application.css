@@ -1,0 +1,123 @@
+html, body, section, article,
+h1, h2, p, strong, em, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.game-board {
+  margin: auto;
+  height: 560px;
+  width: 560px;
+  display: block;
+}
+
+.row {
+  height: 50px;
+  width: 100%;
+  float: left;
+}
+
+.tile {
+  text-align: center;
+  height: 100%;
+  width: 50px;
+  float: left;
+  background-color: lightgrey;
+  border-style: inset;
+  margin: 4px 0;
+  font-size: 36px;
+}
+
+.hidden {
+  border-style: outset;
+}
+
+.bomb {
+  background-color: red;
+}
+
+.adjacent {
+  color: blue;
+}
+
+.flagged {
+  border-style: outset;
+  color: yellow;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: #333;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #333;
+  font-family: monospace;
+  text-align: center;
+  font-size: 28px;
+}
+
+.modal {
+  display: none;
+}
+
+.active {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 998;
+}
+
+.modal.is-active {
+  display: block;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.modal-content {
+  margin: auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+
+.container {
+  position: relative;
+}
+
+input {
+  font-size: 36px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
